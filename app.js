@@ -1,7 +1,22 @@
 
 //Single state object
 var state = {
-  items: []
+  items: [{
+    name: 'apples',
+    checked: false,
+  },
+  {
+    name: 'oranges',
+    checked: false,
+  },
+  {
+    name: 'milk',
+    checked: true,
+  },
+  {
+    name: 'bread',
+    checked: false,
+  }]
 };
 
 //State modification functions
@@ -19,6 +34,9 @@ function checkItem(state, item) {
 }
 
 function deleteItem(state, item) {
+   var index = item.data("itemindex");
+   state.items.splice(index,1);
+   renderList(state, $('.js-shopping-list'));
 }
 
 //Render functions
@@ -54,14 +72,16 @@ function handlesItemToggles() {
 }
 
 function handlesItemDeletes() {
-  $('.js-shopping-item-delete').on('click', function(e) {
-    e.preventDefault();
+  $('.js-shopping-list').on('click', '.js-shopping-item-delete', function(e) {
+     var targetDelete = $(this).closest('li');
+     deleteItem(state, targetDelete);
   });
 }
 
 
-//
+//Document ready
 $(function() {
   handlesItemAdds();
   handlesItemToggles();
+  handlesItemDeletes();
 });
