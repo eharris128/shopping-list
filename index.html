@@ -20,53 +20,55 @@
     </form>
 
     <ul class="shopping-list js-shopping-list">
-      <!-- <li>
-        <span class="shopping-item js-shopping-item">apples</span>
+      <li data-itemindex="${i}">
+        <span class="shopping-item js-shopping-item ${item.checked ? 'shopping-item__checked">apples</span>
         <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
+          <button class="shopping-item-toggle js-shopping-item-toggle">
             <span class="button-label">check</span>
           </button>
-          <button class="shopping-item-delete">
+          <button class="shopping-item-delete .js-shopping-item-delete">
             <span class="button-label">delete</span>
           </button>
         </div>
       </li>
-      <li>
-        <span class="shopping-item">oranges</span>
+      <li data-itemindex="${i}">
+        <span class="shopping-item js-shopping-item ${item.checked ? 'shopping-item__checked">oranges</span>
         <div class="shopping-item-controls">
           <button class="shopping-item-toggle">
             <span class="button-label">check</span>
           </button>
-          <button class="shopping-item-delete">
+          <button class="shopping-item-delete .js-shopping-item-delete">
             <span class="button-label">delete</span>
           </button>
         </div>
       </li>
-      <li>
-        <span class="shopping-item shopping-item__checked">milk</span>
+      <li data-itemindex="${i}">
+        <span class="shopping-item js-shopping-item ${item.checked ? 'shopping-item__checked shopping-item__checked">milk</span>
         <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
+          <button class="shopping-item-toggle js-shopping-item-toggle">
             <span class="button-label">check</span>
           </button>
-          <button class="shopping-item-delete">
+          <button class="shopping-item-delete .js-shopping-item-delete">
             <span class="button-label">delete</span>
           </button>
         </div>
       </li>
-      <li>
-        <span class="shopping-item">bread</span>
+      <li data-itemindex="${i}">
+        <span class="shopping-item js-shopping-item ${item.checked ? 'shopping-item__checked">bread</span>
         <div class="shopping-item-controls">
-          <button class="shopping-item-toggle">
+          <button class="shopping-item-toggle js-shopping-item-toggle">
             <span class="button-label">check</span>
           </button>
-          <button class="shopping-item-delete">
+          <button class="shopping-item-delete .js-shopping-item-delete">
             <span class="button-label">delete</span>
           </button>
         </div>
-      </li> -->
+      </li>
     </ul>
   </div>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </body>
 
